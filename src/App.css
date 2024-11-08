@@ -2,31 +2,40 @@
   display: flex;
   justify-content: flex-end;
   margin: 20px;
-  
+
 }
+
 .login-button div {
   cursor: pointer;
 }
 
-.nav-section{
+.nav-section {
   display: flex;
   justify-content: center;
 }
 
-.menu-list{
+.menu-list {
   display: flex;
   list-style-type: none;
-  
+
 }
 
 .menu-list li {
   padding: 10px;
 }
 
-.menu-area{
+.menu-area {
   display: flex;
-  
+
   justify-content: center;
+}
+
+.burger-menu {
+  margin-left: 20px;
+}
+
+.hide {
+  visibility: hidden
 }
 
 .search-box {
@@ -36,30 +45,34 @@
   padding: 5px;
 }
 
-.search-box input{
-  border:none;
-  margin-left:5px;
+.search-box input {
+  border: none;
+  margin-left: 5px;
 }
 
 .search-box input:focus {
-  outline:none
+  outline: none
 }
 
-.product-card{
+.product-card {
   transition: 0.5s;
   background-color: white;
 }
 
-.product-card:hover{
+.product-card:hover {
   transform: scale(1.1);
 }
 
-.product-img{
+.product-img {
   display: flex;
   justify-content: flex-end;
 }
 
-.detail-info{
+.product-img img {
+  width: 100%;
+}
+
+.detail-info {
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 20px;
@@ -70,6 +83,62 @@
   width: 100%;
 }
 
-@media screen and (max-width:430px) {
-  
+@media screen and (max-width:63rem) {
+  .hide {
+    visibility: visible;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .product-card img {
+    width: 100%;
+  }
+}
+
+.side-menu {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #DC143C;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 2
+}
+
+.side-menu-list button {
+  margin: 5px;
+  border: none;
+  background: none;
+  width: 120px;
+}
+
+.side-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border: none;
+  background: none;
+}
+
+.side-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-menu-list button:hover {
+  background-color: #FFB6C1;
+  border-radius: 3px;
 }
